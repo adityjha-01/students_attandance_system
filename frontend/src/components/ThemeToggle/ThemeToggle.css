@@ -1,0 +1,26 @@
+.theme-toggle {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.1);
+  border-color: #764ba2;
+}
+
+.dark-mode .theme-toggle {
+  border-color: #fff;
+}
+
+.dark-mode .theme-toggle:hover {
+  border-color: #f093fb;
+}

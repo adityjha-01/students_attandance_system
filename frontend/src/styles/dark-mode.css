@@ -1,0 +1,423 @@
+/* Dark mode CSS variables and styles */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-card: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #ddd;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-card: #2d2d2d;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b3b3b3;
+  --border-color: #444;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* Global dark mode styles */
+.dark-mode body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dark-mode .dashboard-container,
+.dark-mode .student-enroll-container {
+  background: var(--bg-primary);
+}
+
+.dark-mode .dashboard-nav {
+  background: var(--bg-card);
+  box-shadow: 0 2px 4px var(--shadow);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .dashboard-content {
+  color: var(--text-primary);
+}
+
+.dark-mode .course-card,
+.dark-mode .student-card,
+.dark-mode .login-container,
+.dark-mode .create-course-container,
+.dark-mode .students-container,
+.dark-mode .attendance-container,
+.dark-mode .enroll-container,
+.dark-mode .enroll-course-card,
+.dark-mode .page-header,
+.dark-mode .empty-state {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .course-card:hover,
+.dark-mode .student-card:hover,
+.dark-mode .enroll-course-card:hover {
+  box-shadow: 0 4px 12px var(--shadow-hover);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: var(--text-primary);
+}
+
+.dark-mode p,
+.dark-mode .course-info p,
+.dark-mode .course-dates p,
+.dark-mode .student-info p {
+  color: var(--text-secondary);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+  border-color: #f093fb;
+  background: var(--bg-secondary);
+}
+
+.dark-mode .empty-state {
+  color: var(--text-secondary);
+}
+
+.dark-mode .attendance-badge,
+.dark-mode .status-badge {
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode table {
+  color: var(--text-primary);
+}
+
+.dark-mode table th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.dark-mode table td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .nav-user span {
+  color: var(--text-primary);
+}
+
+.dark-mode .error-message {
+  background-color: #4a1a1a;
+  color: #ffb3b3;
+  border-color: #8b0000;
+}
+
+.dark-mode .success-message {
+  background-color: #1a4a1a;
+  color: #b3ffb3;
+  border-color: #008b00;
+}
+
+.dark-mode .form-group label {
+  color: var(--text-primary);
+}
+
+.dark-mode .course-actions {
+  border-top-color: var(--border-color);
+}
+
+/* Login page dark mode */
+.dark-mode .login-container {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-mode .login-toggle {
+  color: var(--text-secondary);
+}
+
+.dark-mode .login-toggle:hover {
+  color: var(--text-primary);
+}
+
+/* Preserve button colors */
+.dark-mode .btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.dark-mode .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.dark-mode .btn-logout {
+  background-color: #dc3545;
+  color: white;
+}
+
+.dark-mode .btn-view {
+  background-color: #28a745;
+  color: white;
+}
+
+.dark-mode .btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Enrollment page specific dark mode fixes */
+.dark-mode .semester-info {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .enroll-course-card h3,
+.dark-mode .course-header h3 {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode .detail-row {
+  color: var(--text-secondary);
+}
+
+.dark-mode .detail-label {
+  color: var(--text-secondary);
+}
+
+.dark-mode .detail-value {
+  color: var(--text-primary);
+}
+
+.dark-mode .seats-text {
+  color: var(--text-secondary);
+}
+
+.dark-mode .seats-bar {
+  background: #444;
+}
+
+.dark-mode .enroll-course-card.full {
+  background: var(--bg-secondary);
+  opacity: 0.8;
+}
+
+.dark-mode .loading {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .empty-state h3 {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode .empty-state p {
+  color: var(--text-secondary) !important;
+}
+
+/* Course details dark mode */
+.dark-mode .course-details p,
+.dark-mode .course-details span {
+  color: var(--text-secondary);
+}
+
+/* Page header dark mode */
+.dark-mode .page-header h2 {
+  color: var(--text-primary) !important;
+}
+
+/* Info banner - keep visible with good contrast */
+.dark-mode .info-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Course dates dark mode */
+.dark-mode .course-dates strong {
+  color: var(--text-primary);
+}
+
+/* Student name in view students */
+.dark-mode .student-name {
+  color: var(--text-primary) !important;
+}
+
+/* Form labels */
+.dark-mode label,
+.dark-mode .form-label {
+  color: var(--text-primary);
+}
+
+/* Make all headings visible */
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: var(--text-primary);
+}
+
+/* Stat cards */
+.dark-mode .stat-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .stat-value {
+  color: var(--text-primary);
+}
+
+.dark-mode .stat-label {
+  color: var(--text-secondary);
+}
+
+/* Course info sections */
+.dark-mode .course-info strong,
+.dark-mode .course-dates strong {
+  color: var(--text-primary);
+}
+
+/* Additional comprehensive text visibility fixes */
+.dark-mode span,
+.dark-mode div {
+  color: inherit;
+}
+
+/* Ensure all paragraphs are visible */
+.dark-mode p {
+  color: var(--text-secondary);
+}
+
+/* Strong text should be more prominent */
+.dark-mode strong {
+  color: var(--text-primary);
+}
+
+/* Links should be visible */
+.dark-mode a {
+  color: #76b5ff;
+}
+
+.dark-mode a:hover {
+  color: #a0c7ff;
+}
+
+/* Breadcrumbs and navigation text */
+.dark-mode .breadcrumb,
+.dark-mode .nav-link {
+  color: var(--text-secondary);
+}
+
+/* List items */
+.dark-mode li {
+  color: var(--text-secondary);
+}
+
+/* Placeholder text */
+.dark-mode ::placeholder {
+  color: #666;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #666;
+}
+
+/* Dropdown/select options */
+.dark-mode option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Make sure icons and symbols are visible */
+.dark-mode .icon,
+.dark-mode .symbol {
+  color: var(--text-primary);
+}
+
+/* Ensure all card content is readable */
+.dark-mode .card-body,
+.dark-mode .card-content {
+  color: var(--text-primary);
+}
+
+.dark-mode .card-title {
+  color: var(--text-primary);
+}
+
+.dark-mode .card-text {
+  color: var(--text-secondary);
+}
+
+/* Create Course page dark mode */
+.dark-mode .create-course-container,
+.dark-mode .view-students-container,
+.dark-mode .students-container {
+  background: var(--bg-primary);
+}
+
+.dark-mode .create-course-card,
+.dark-mode .view-students-card {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.dark-mode .form-group {
+  color: var(--text-primary);
+}
+
+.dark-mode .view-students-card h2,
+.dark-mode .create-course-card h2 {
+  color: var(--text-primary);
+}
+
+.dark-mode .course-subtitle {
+  color: var(--text-secondary);
+}
+
+/* Attendance page dark mode */
+.dark-mode .attendance-container {
+  background: var(--bg-primary);
+}
+
+.dark-mode .attendance-card {
+  background: var(--bg-card);
+}
+
+.dark-mode .date-selector label {
+  color: var(--text-primary);
+}
+
+.dark-mode .students-list {
+  color: var(--text-primary);
+}
+
+/* Button hover states in dark mode */
+.dark-mode .btn-secondary:hover {
+  background: #5a6268;
+}
+
+.dark-mode .btn-back:hover {
+  background: #5a6268;
+}
+
+/* Ensure contrast for disabled elements */
+.dark-mode button:disabled,
+.dark-mode input:disabled {
+  opacity: 0.5;
+  color: var(--text-secondary);
+}
+
+/* Border colors for all cards */
+.dark-mode .course-header,
+.dark-mode .course-actions {
+  border-color: var(--border-color);
+}
